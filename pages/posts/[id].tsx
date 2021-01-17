@@ -5,7 +5,11 @@ import Date from "../../components/date";
 // Add this import at the top of the file
 import { GetStaticProps, GetStaticPaths } from "next";
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: {
+  params: { id: string };
+}) => {
   const postData = await getPostData(params.id);
   return {
     props: {
