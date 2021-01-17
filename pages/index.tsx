@@ -21,10 +21,6 @@ export default function Home({
       </Head>
       <section className="text-xl">
         <p>I'm Chris!</p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
       </section>
       <section className="text-xl pt-px">
         <h2 className="text-2xl my-4">Blog</h2>
