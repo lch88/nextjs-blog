@@ -3,7 +3,6 @@ import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Date from "../../components/date";
 // Add this import at the top of the file
-import utilStyles from "../../styles/utils.module.css";
 import { GetStaticProps, GetStaticPaths } from "next";
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
@@ -38,8 +37,8 @@ export default function Post({
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1 className="text-3xl font-bold">{postData.title}</h1>
+        <div className="text-opacity-25">
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
